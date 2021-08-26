@@ -17,10 +17,12 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #555;
 }
 ul {
     list-style: none;
+}
+p {
+    color: #555;
 }
 .container {
     padding: 0 15px;
@@ -45,6 +47,46 @@ ul {
     }
 }
 /* End Global Rules */
+/* Start Components */
+.main-heading {
+    text-align: center;
+}
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    position: relative;
+}
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+}
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -38px;
+    transform: translateX(-50%);
+}
+.main-heading p {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+}
+
+/* End Components */
 /* Start Header */
 header {
     position: absolute;
@@ -174,6 +216,7 @@ header nav .search i {
 .landing .text .content p {
     line-height: 2;
     font-size: 14px;
+    color: #fff;
 }   
 .landing .switch-left,
 .landing .switch-right {
