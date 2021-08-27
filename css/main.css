@@ -2,6 +2,7 @@
 :root {
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 / 70%);
+    --sec-pad: 100px;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -124,7 +125,7 @@ header nav ul {
 }
 header nav ul li a {
     display: block;
-    padding: 30px 20px;
+    padding: 30px 10px;
     text-decoration: none;
     color: #fff;
     position: relative;
@@ -250,4 +251,56 @@ header nav .search i {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
+@media (max-width: 767px){
+    .landing .text {
+        width: 100%;
+        padding: 20px;
+    }
+    .landing .text .content h2 {
+        font-size: 24px;
+    }
+    .landing .text .content p {
+        font-size: 12px;
+    }
+    .landing .switch-left,
+    .landing .switch-right {
+        display: none;
+    }
+}
 /* End Landing */
+/* Start Services */
+.services {
+    padding: var(--sec-pad) 0;
+}
+.services .serv {
+    display: flex;
+}
+.services .serv i {
+    margin: 10px 50px 0 0;
+}
+.services .serv h3 {
+margin-bottom: 30px;
+color: var(--main-color);
+}
+.services .serv p {
+line-height: 2;
+}
+@media (min-width: 768px) {
+    .services .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 60px 40px;
+    }
+}
+@media (max-width: 767px) {
+    .services .serv {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .services .serv i {
+        margin: 0 0 30px;
+    }
+}
+
+/* End Services */
