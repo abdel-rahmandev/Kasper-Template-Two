@@ -431,6 +431,7 @@ line-height: 2;
       width: fit-content;
       border: none;
       cursor: pointer;
+      text-transform: uppercase;
   }
   @media (min-width: 768px) {
     .portfolio .images-container .box {
@@ -443,3 +444,47 @@ line-height: 2;
     }
   }
 /* End Portfolio */
+/* Start Video */
+.video {
+    position: relative;
+}
+.video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+.video video {
+    width: 100%;
+}
+.video .text {
+    position: absolute;
+    width: 100%;
+    background-color: var(--transparent-color);
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 50px;
+    z-index: 1;
+}
+.video .text h2 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.video .text p {
+    color: #fff;
+    margin-bottom: 30px;
+}
+.video .text button {
+    padding: 10px 20px;
+    background-color: rgb(0 0 0 / 75%);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* End Video */
