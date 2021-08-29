@@ -767,3 +767,87 @@ line-height: 2;
     font-weight: bold;
 }
 /* End Quote */
+/* Start Pricing */
+.pricing {
+    padding: var(--sec-pad) 0;
+}
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.pricing .plan {
+    text-align: center;
+    background-color: #fcfcfc;
+    color: #333;
+}
+.pricing .plan .price {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plan h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.pricing .plan span {
+    font-size: 50px;
+    font-weight: bold;
+}
+.pricing .plan span::before {
+    content: "$";
+    font-size: 20px;
+    font-weight: normal;
+    position: relative;
+    top: -20px;
+    left: -10px;
+}
+.pricing .plan span::after {
+    content: "/Mo";
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    right: -10px;
+}
+.pricing .plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plan ul li {
+    padding: 20px;
+    position: relative;
+}
+.pricing .plan ul li:not(:last-child)::after {
+    content: "";
+    width: 150px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pricing .plan .buy {
+    display: block;
+    margin: 30px auto;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    padding: 10px 20px;
+}
+.pricing .contact-text {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    margin: 50px auto 20px;
+}
+.pricing .contact {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+/* End Pricing */
