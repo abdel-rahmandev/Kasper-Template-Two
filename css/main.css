@@ -602,3 +602,120 @@ line-height: 2;
     }
 }
 /* Start Stats */
+/* Start Testimonials & Skills */
+.test-skills {
+    padding: var(--sec-pad) 0;
+}
+.test-skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (min-width: 992px) {
+    .test-skills .container > div {
+        flex-basis: 45%;
+    }
+}
+.test-skills .container > div > h3 {
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.test-skills .container > div > p {
+    margin-bottom: 60px;
+    line-height: 2;
+    text-align: center;
+}
+.test-skills .container .content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.test-skills .container .content img {
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+.test-skills .container .content .text {
+    border-bottom: 1px solid #ccc;
+}
+.test-skills .container .content .text p {
+    line-height: 1.8;
+}
+.test-skills .container .content .text span {
+    display: block;
+    text-align: right;
+    margin-bottom: 10px;
+    color: #777;
+    font-style: italic;
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+    .test-skills .container .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .test-skills .container .content img {
+        margin: 0 0 20px;
+    }
+}
+.test-skills .container .bullets {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0;
+}
+.test-skills .container .bullets li {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+.test-skills .container .bullets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.test-skills .container .prog-container {
+    margin-bottom: 30px;
+}
+.test-skills .container .prog-container h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.test-skills .container .prog-container .prog {
+    background-color: #ddd;
+    height: 30px;
+}
+.test-skills .container .prog-container .prog span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.test-skills .container .prog-container .prog span::before {
+    content: attr(data-progress);
+    color: #fff;
+    background-color: #333;
+    padding: 0px 10px;
+    width: 20px;
+    height: 25px;
+    font-size: 14px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -20px;
+    top: -35px;
+}
+.test-skills .container .prog-container .prog span::after {
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: #333 transparent transparent;
+    top: -10px;
+    right: -5px;
+}
+/* End Testimonials & Skills */
