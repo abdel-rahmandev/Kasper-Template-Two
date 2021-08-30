@@ -81,10 +81,15 @@ p {
     bottom: -38px;
     transform: translateX(-50%);
 }
+section:hover .main-heading h2::after {
+    background-color: var(--main-color);
+    
+}
 .main-heading p {
     width: 500px;
     max-width: 100%;
     margin: 0 auto 100px;
+    line-height: 2;
 }
 
 /* End Components */
@@ -177,6 +182,10 @@ header nav .search i {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+}
+header nav .search i:hover {
+    color: var(--main-color);
 }
 /* End Header */
 /* Start Landing */
@@ -185,6 +194,7 @@ header nav .search i {
     background-color: #111;
     background-image: url(../images/landing.jpg);
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
 }
 .landing .overlay {
@@ -225,6 +235,11 @@ header nav .search i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+}
+.landing .switch-left:hover,
+.landing .switch-right:hover {
+    color: var(--main-color);
 }
 .landing .switch-left {
     left: 30px;
@@ -247,7 +262,7 @@ header nav .search i {
     border: 1px solid #fff;
     border-radius: 50%;
 }
-.landing .bullets li.active {
+.landing .bullets li.active, .landing .bullets li.hover {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
@@ -274,6 +289,10 @@ header nav .search i {
 }
 .services .serv {
     display: flex;
+    transition: 0.3s;
+}
+.services .serv:hover {
+    transform: scale(1.05);
 }
 .services .serv i {
     margin: 10px 50px 0 0;
@@ -307,9 +326,11 @@ line-height: 2;
 /* Start Design Features */
 .design-features {
     padding: var(--sec-pad) 0;
-    background-color: #333;
+    background-color: #111;
     background-image: url(../images/design-features.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
     align-items: center;
     position: relative;
@@ -378,7 +399,7 @@ line-height: 2;
     justify-content: center;
 }
 .portfolio .shuffle li {
-    padding: 10px;
+    padding: 5px 10px;
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -425,14 +446,18 @@ line-height: 2;
   .portfolio .more {
       display: block;
       margin: 0 auto;
-      padding: 15px 20px;
+      padding: 10px 20px;
       color: #fff;
-      background-color: var(--main-color);
       width: fit-content;
       border: none;
       cursor: pointer;
       text-transform: uppercase;
-  }
+      background-color: var(--main-color);
+    transition: 0.3s;
+}
+.portfolio .more:hover {
+    transform: scale(1.1);
+}
   @media (min-width: 768px) {
     .portfolio .images-container .box {
         flex-basis: 50%;
@@ -486,6 +511,10 @@ line-height: 2;
     border: none;
     text-transform: uppercase;
     cursor: pointer;
+    transition: 0.3s;
+}
+.video .text button:hover {
+    transform: scale(1.1);
 }
 /* End Video */
 /* Start About */
@@ -513,6 +542,7 @@ line-height: 2;
     padding: var(--sec-pad) 0;
     background-image: url(../images/stats.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     position: relative;
 }
@@ -540,6 +570,10 @@ line-height: 2;
     color: #fff;
     z-index: 2;
     padding: 50px;
+    transition: 0.3s;
+}
+.stats .container .box:hover {
+    transform: scale(1.1);
 }
 .stats .container .box .icon {
     width: 40px;
@@ -577,6 +611,12 @@ line-height: 2;
 }
 .stats .container .box .icon i {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #252525;
+    width: 100%;
+    height: 110%;
+    border-radius: 10%;
 }
 .stats .container .box .number {
     font-size: 40px;
@@ -725,6 +765,8 @@ line-height: 2;
     padding: var(--sec-pad) 0;
     background-image: url(../images/quote.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     position: relative;
     color: #fff;
     text-align: center;
@@ -833,6 +875,16 @@ line-height: 2;
     border: 1px solid var(--main-color);
     width: fit-content;
     padding: 10px 20px;
+    color: #333;
+    cursor: pointer;
+    background-image: linear-gradient(to left, #fff 50%, var(--main-color) 50%);
+    background-size: 200% 100%;
+    background-position-x: right;
+    transition: 0.3s;
+}
+.pricing .plan .buy:hover {
+    color: #fff;
+    background-position-x: left;
 }
 .pricing .contact-text {
     text-align: center;
@@ -848,6 +900,10 @@ line-height: 2;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
+    transition: 0.3s;
+}
+.pricing .contact:hover {
+    transform: scale(1.1);
 }
 
 /* End Pricing */
@@ -856,6 +912,7 @@ line-height: 2;
     padding: var(--sec-pad) 0;
     background-image: url(../images/subscribe.jpg);
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
 }
 .subscribe::before {
@@ -959,6 +1016,10 @@ line-height: 2;
     padding: 20px;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
+}
+.contact .contact-content form input[type="submit"]:hover {
+    transform: scale(1.1);
 }
 .contact .contact-content .info {
     flex-basis: 25%;
@@ -998,7 +1059,8 @@ footer {
     padding: calc(var(--sec-pad) / 2) 0;
     background-image: url(../images/footer.jpg);
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: bottom;
     position: relative;
 }
 footer::before {
@@ -1032,6 +1094,12 @@ footer .social-icons {
 footer .social-icons i {
     color: #fff;
     padding: 10px 15px;
+    font-size: 18px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+footer .social-icons i:hover {
+    transform: rotate(360deg);
 }
 footer .copyright {
     color: #fff;
@@ -1042,3 +1110,46 @@ footer .copyright span {
     font-weight: bold;
 }
 /* End Footer */
+/* Scroll to Top */
+.scroll-top {
+    color: var(--main-color);
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    right: 10px;
+    bottom: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.scroll-top:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    transition: 0.3s;
+    box-shadow:  0 0 5px #fff;
+}
+.scroll-top:hover i {
+    animation: jumpTop 0.3s;
+}
+/* Start Animation */
+@keyframes jumpTop {
+    50% {
+        transform: translateY(-100%);
+    }
+    90% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* End Animation */
