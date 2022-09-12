@@ -134,7 +134,7 @@ header nav ul li a {
   text-decoration: none;
   color: #fff;
   position: relative;
-  transition: 0.3s;
+  transition: 0.3s linear;
   overflow: hidden;
 }
 header nav ul li a.active,
@@ -182,6 +182,7 @@ header nav .search i {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.3s linear;
   cursor: pointer;
 }
 header nav .search i:hover {
@@ -235,6 +236,7 @@ header nav .search i:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.3s linear;
   cursor: pointer;
 }
 .landing .switch-left:hover,
@@ -290,7 +292,7 @@ header nav .search i:hover {
 }
 .services .serv {
   display: flex;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .services .serv:hover {
   transform: scale(1.05);
@@ -403,6 +405,7 @@ header nav .search i:hover {
   padding: 5px 10px;
   cursor: pointer;
   text-transform: uppercase;
+  transition: 0.3s linear;
 }
 .portfolio .shuffle li.active,
 .portfolio .shuffle li:hover {
@@ -420,7 +423,7 @@ header nav .search i:hover {
 }
 .portfolio .images-container .box img {
   width: 100%;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .portfolio .images-container .box .caption {
   padding: 20px;
@@ -428,7 +431,7 @@ header nav .search i:hover {
   width: 100%;
   position: absolute;
   bottom: -100%;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .portfolio .images-container .box:hover img {
   transform: rotate(3deg) scale(1.1);
@@ -454,7 +457,7 @@ header nav .search i:hover {
   cursor: pointer;
   text-transform: uppercase;
   background-color: var(--main-color);
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .portfolio .more:hover {
   transform: scale(1.1);
@@ -512,7 +515,7 @@ header nav .search i:hover {
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .video .text button:hover {
   transform: scale(1.1);
@@ -571,7 +574,7 @@ header nav .search i:hover {
   color: #fff;
   z-index: 2;
   padding: 50px;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .stats .container .box:hover {
   transform: scale(1.1);
@@ -882,7 +885,7 @@ header nav .search i:hover {
   background-image: linear-gradient(to left, #fff 50%, var(--main-color) 50%);
   background-size: 200% 100%;
   background-position-x: right;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .pricing .plan .buy:hover {
   color: #fff;
@@ -902,7 +905,7 @@ header nav .search i:hover {
   color: white;
   padding: 15px 30px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .pricing .contact:hover {
   transform: scale(1.1);
@@ -1018,7 +1021,7 @@ header nav .search i:hover {
   padding: 20px;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .contact .contact-content form input[type="submit"]:hover {
   transform: scale(1.1);
@@ -1097,7 +1100,7 @@ footer .social-icons i {
   color: #fff;
   padding: 10px 15px;
   font-size: 18px;
-  transition: 0.5s;
+  transition: 0.5s linear;
   cursor: pointer;
 }
 footer .social-icons i:hover {
@@ -1129,12 +1132,12 @@ footer .copyright span {
   border-radius: 50%;
   text-decoration: none;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 .scroll-top:hover {
   background-color: var(--main-color);
   color: #fff;
-  transition: 0.3s;
+  transition: 0.3s linear;
   box-shadow: 0 0 5px #fff;
 }
 .scroll-top:hover i {
